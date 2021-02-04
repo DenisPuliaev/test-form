@@ -40,8 +40,6 @@
   }
   
   @each $breakpoint in map-keys($grid-breakpoints) {
-    $size: map-get($grid-breakpoints, $breakpoint);
-
     @for $range from 1 through $cols {
       &__col--#{$breakpoint}--#{$range} {
         @include up($breakpoint, $grid-breakpoints) {

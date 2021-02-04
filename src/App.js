@@ -7,7 +7,7 @@ function App() {
   return (
     <Container style={{background: '#EEE'}}>
       <Row>
-        <Col sm={2} md={4} lg={12}>
+        <Col xs={6} sm={2} md={4} lg={12}>
           <div style={{ height: '20px', background: 'red' }}></div>
         </Col>
         <Col sm={2} md={4} lg={12}>

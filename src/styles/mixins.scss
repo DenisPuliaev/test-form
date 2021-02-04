@@ -1,0 +1,13 @@
+@import 'variables';
+
+@mixin up($name, $breakpoints) {
+  @media (min-width: map-get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+@mixin make-hidden-up($breakpoint) {
+  @include up($breakpoint, $grid-breakpoints) {
+    display: hidden;
+  }
+}

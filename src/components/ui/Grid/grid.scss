@@ -1,0 +1,57 @@
+@import '../../../styles/variables.scss';
+
+@mixin up($name, $bp: $grid-breakpoints) {
+  @media (min-width: map-get($bp, $name)) {
+    @content;
+  }
+}
+
+%col-styles {
+  flex: 0 0 auto;
+  width: 100%;
+  padding-right: ($gutter / 2);
+  padding-left: ($gutter / 2);
+}
+
+.container {
+  width: 100%;
+  padding-right: ($gutter / 2);
+  padding-left: ($gutter / 2);
+  margin-right: auto;
+  margin-left: auto;
+
+  @each $breakpoint, $width in $container-widths {
+    @include up($breakpoint, $grid-breakpoints) {
+      max-width: $width;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -($gutter / 2);
+    margin-left: -($gutter / 2);
+  }
+
+  &__col {
+    @extend %col-styles;
+  }
+
+  @for $range from 1 through $cols {
+    &__col--#{$range} {
+      width: 100% * $range / $cols;
+    }
+  }
+  
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $size: map-get($grid-breakpoints, $breakpoint);
+
+    @for $range from 1 through $cols {
+      &__col--#{$breakpoint}--#{$range} {
+        @include up($breakpoint, $grid-breakpoints) {
+          width: 100% * $range / $cols;
+        }
+      }
+    }
+  }
+}

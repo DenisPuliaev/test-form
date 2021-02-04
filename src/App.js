@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './styles/main.scss';
+import './App.scss';
+import { Container, Row, Col } from './components/ui/Grid';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container style={{background: '#EEE'}}>
+      <Row>
+        <Col sm={2} md={4} lg={12}>
+          <div style={{ height: '20px', background: 'red' }}></div>
+        </Col>
+        <Col sm={2} md={4} lg={12}>
+          <div style={{ height: '20px', background: 'green' }}></div>
+        </Col>
+        <Col sm={2} md={4} lg={12}>
+          <div style={{ height: '20px', background: 'blue' }}></div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

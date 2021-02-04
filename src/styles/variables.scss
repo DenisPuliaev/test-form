@@ -1,0 +1,14 @@
+$container-widths: (
+  sm: 360px,
+  md: 720px,
+  lg: 960px,
+);
+
+$grid-breakpoints: (
+  sm: 544px,
+  md: 784px,
+  lg: 1024px,
+);
+
+$gutter: 20px;
+$cols: 12;

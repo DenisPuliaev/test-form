@@ -19,8 +19,7 @@ export const Row = ({ children, className = '', ...rest }) => {
 };
 
 export const Col = ({ children, className = '', sm, md, lg, ...rest }) => {
-  const classes = classnames({
-    'container__col': true,
+  const classes = classnames('container__col', {
     [`container__col--sm--${sm}`]: sm,
     [`container__col--md--${md}`]: md,
     [`container__col--lg--${lg}`]: lg,

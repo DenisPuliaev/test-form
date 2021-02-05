@@ -13,20 +13,3 @@
     }
   }
 }
-
-@mixin make-hidden-up($breakpoint) {
-  @include up($breakpoint, $grid-breakpoints) {
-    display: hidden;
-  }
-}
-
-@mixin ganerate-classes-up($class, $mod: null) {
-  $mod: if($mod, --#{$mod}, '');
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    #{$class}#{$mod}--#{$breakpoint} {
-      @include up($breakpoint, $grid-breakpoints) {
-        @content;
-      }
-    }
-  }
-}

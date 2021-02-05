@@ -23,11 +23,12 @@ $font-sizes: (
 $black: #222;
 $gray: (
  400: #aaa,
- 500: #a7a7a7,
+ 500: #a9a9a9,
+ 600: #a7a7a7,
 );
 
 $text-color: $black;
 $input-font-color: $black;
-$input-border: map-get($gray, 500);
+$input-border: map-get($gray, 600);
 $placeholder-size: map-get($font-sizes, "m");
 $placeholder-color: map-get($gray, 400);

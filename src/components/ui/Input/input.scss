@@ -45,6 +45,7 @@ $input-border-focus: #2ba1b5;
     background: $input-bg;
     border-radius: 50%;
     position: relative;
+    border: 1px solid map-get($gray, 600);
   }
 
   &__checkmark:after {

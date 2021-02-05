@@ -4,6 +4,7 @@ import { FormGroup, FormLabel } from '../../components/ui/Form/Form';
 import { Input } from '../../components/ui/Input';
 import Button from '../../components/ui/Button';
 import './form-page.scss';
+import useForm from '../../hooks/useForm';
 
 function Form() {
   return (

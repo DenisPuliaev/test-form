@@ -1,0 +1,18 @@
+@import 'design-system';
+@import 'mixins';
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  .hidden-#{$breakpoint} {
+    @include up($breakpoint, $grid-breakpoints) {
+      display: none;
+    }
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  .visible-#{$breakpoint} {
+    @include up($breakpoint, $grid-breakpoints) {
+      display: block;
+    }
+  }
+}

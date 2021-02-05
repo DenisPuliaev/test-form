@@ -1,5 +1,5 @@
 export {
-  Input,
+  TextInput,
   RadioButton,
-  InputSwitcher
+  Input,
 } from './Input';

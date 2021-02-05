@@ -5,15 +5,15 @@ import "./input.scss";
 export const RadioButton = ({ className = '', children, ...rest }) => {
   console.log('RadioButton')
   return (
-    <label class="radio">
+    <label className={`${className} radio`}>
       <input className="radio__input" type="radio" {...rest} />
-      <span class="radio__checkmark"></span>
+      <span className="radio__checkmark"></span>
       {children}
     </label>
   );
 };
 
-export const Input = ({ className = '', ...rest }) => {
+export const TextInput = ({ className = '', ...rest }) => {
   const classes = classnames({});
 
   return (
@@ -25,14 +25,13 @@ export const Input = ({ className = '', ...rest }) => {
   );
 };
 
-export const InputSwitcher = (props) => {
+export const Input = (props) => {
   const { type } = props;
-  console.log('type', type)
 
   switch(type) {
     case "radio":
       return <RadioButton {...props} />;
     default:
-      return <Input {...props} />;
+      return <TextInput {...props} />;
   }
 };

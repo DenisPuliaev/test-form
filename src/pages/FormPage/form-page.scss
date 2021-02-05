@@ -1,0 +1,36 @@
+@import '../../styles/design-system.scss';
+@import '../../styles/mixins.scss';
+
+.form-page {
+  &__row {
+    align-items: center;
+  }
+
+  &__gender:first-child {
+    margin-right: 45px;
+    @include up('md') {
+      margin-right: 60px;
+    }
+  }
+
+  &__label {
+    margin: 5px 0;
+    @include up('md') {
+      margin: 0;
+      padding-right: 10px;
+      text-align: right;
+    }
+  }
+
+  &__inputs {
+    @include up('md') {
+      padding: 0 60px 0 10px;
+    }
+  }
+
+  &__genders-row {
+    @include down('md') {
+      margin-bottom: 5px;
+    }
+  }
+}

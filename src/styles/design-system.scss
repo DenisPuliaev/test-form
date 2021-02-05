@@ -20,6 +20,7 @@ $font-sizes: (
   l: 16px,
 );
 
+$light: #f1f1eb;
 $black: #222;
 $gray: (
  400: #aaa,
@@ -27,8 +28,14 @@ $gray: (
  600: #a7a7a7,
 );
 
+$font-400: 400 16px / 20px 'Lato', Arial, sans-serif;
+$font-700: 700 16px / 20px 'Lato', Arial, sans-serif;
+
 $text-color: $black;
 $input-font-color: $black;
 $input-border: map-get($gray, 600);
 $placeholder-size: map-get($font-sizes, "m");
 $placeholder-color: map-get($gray, 400);
+$input-bg: $light;
+$input-bg-focus: #fff;
+$input-border-focus: #2ba1b5;

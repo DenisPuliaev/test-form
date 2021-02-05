@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from '../../components/ui/Grid';
 import { FormGroup, FormLabel } from '../../components/ui/Form/Form';
 import { Input } from '../../components/ui/Input';
+import Button from '../../components/ui/Button';
 import './form-page.scss';
 
 function Form() {
@@ -130,6 +131,16 @@ function Form() {
                     <Input placeholder="Ort" />
                   </Col>
                 </Row>
+              </div>
+            </Col>
+          </Row>
+        </FormGroup>
+        <FormGroup>
+          <Row className="form-page__row">
+            <Col md={4}/>
+            <Col md={6}>
+              <div className="form-page__inputs form-page__btn-wrap">
+                <Button type="submit" className="form-page__btn">Anmelden</Button>
               </div>
             </Col>
           </Row>

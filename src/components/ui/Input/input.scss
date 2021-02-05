@@ -1,13 +1,9 @@
 @import '../../../styles/design-system.scss';
 
-$input-bg: #f1f1eb;
-$input-bg-focus: #fff;
-$input-border-focus: #2ba1b5;
-
 .input {
   height: 42px;
   color: $input-font-color;
-  font: 400 16px / 20px 'Lato', Arial, sans-serif;
+  font: $font-400;
   padding: 10px;
   border-radius: 1px;
   background: $input-bg;

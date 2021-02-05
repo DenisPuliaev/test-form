@@ -35,4 +35,14 @@
       margin-bottom: 5px;
     }
   }
+
+  &__btn-wrap {
+    text-align: right;
+  }
+
+  &__btn {
+    @include down('md') {
+      width: 100%;
+    }
+  }
 }

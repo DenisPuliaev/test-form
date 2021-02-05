@@ -1,0 +1,33 @@
+$container-widths: (
+  sm: 360px,
+  md: 720px,
+  lg: 960px,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 784px,
+  lg: 1024px,
+);
+
+$gutter: 20px;
+$cols: 12;
+
+$font-sizes: (
+  s: 14px,
+  m: 15px,
+  l: 16px,
+);
+
+$black: #222;
+$gray: (
+ 400: #aaa,
+ 500: #a7a7a7,
+);
+
+$text-color: $black;
+$input-font-color: $black;
+$input-border: map-get($gray, 500);
+$placeholder-size: map-get($font-sizes, "m");
+$placeholder-color: map-get($gray, 400);

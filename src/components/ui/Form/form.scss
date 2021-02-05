@@ -1,0 +1,17 @@
+@import '../../../styles/design-system';
+@import '../../../styles/mixins';
+
+.form-group {
+  margin-bottom: 26px;
+
+  &__label {
+    margin: 10px 0;
+    font: 700 15px / 20px 'Lato', Arial, sans-serif;
+
+    @include up("md") {
+      text-align: right;
+    }
+  }
+
+  &__input {}
+}

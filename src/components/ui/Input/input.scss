@@ -1,0 +1,67 @@
+@import '../../../styles/design-system.scss';
+
+$input-bg: #f1f1eb;
+$input-bg-focus: #fff;
+$input-border-focus: #2ba1b5;
+
+.input {
+  height: 40px;
+  color: $input-font-color;
+  font: 400 16px / 20px 'Lato', Arial, sans-serif;
+  padding: 10px;
+  border-radius: 1px;
+  background: $input-bg;
+  outline: none;
+  border: 1px solid $input-border;
+  width: 100%;
+
+  &:focus {
+    background: $input-bg-focus;
+    border: 2px solid $input-border-focus;
+  }
+
+  &::placeholder {
+    color: $placeholder-color;
+  }
+}
+
+.radio {
+  display: inline-flex;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__checkmark {
+    margin-right: 12px;
+    height: 18px;
+    width: 18px;
+    background: $input-bg;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  &__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    width: 8px;
+    height: 8px;
+    background: #515b63;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__checkmark:after,
+  &__input:checked ~ &__checkmark:after {
+    display: block;
+  }
+}

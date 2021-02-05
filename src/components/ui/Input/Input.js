@@ -3,7 +3,6 @@ import classnames from "classnames";
 import "./input.scss";
 
 export const RadioButton = ({ className = '', children, ...rest }) => {
-  console.log('RadioButton')
   return (
     <label className={`${className} radio`}>
       <input className="radio__input" type="radio" {...rest} />

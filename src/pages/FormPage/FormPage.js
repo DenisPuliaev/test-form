@@ -1,10 +1,26 @@
 import React from 'react';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 import { Container, Row, Col } from '../../components/ui/Grid';
 import { FormGroup, FormLabel } from '../../components/ui/Form/Form';
 import { Input } from '../../components/ui/Input';
 import Button from '../../components/ui/Button';
-import { useFormik } from 'formik';
 import './form-page.scss';
+
+const Schema = Yup.object().shape({
+  gender: Yup.string().required('Required'),
+  firstName: Yup.string().required('Required'),
+  lastName: Yup.string().required('Required'),
+  birth: Yup.object({
+    day: Yup.string().required('Required'),
+    month: Yup.string().required('Required'),
+    year: Yup.string().required('Required')
+  }),
+  street: Yup.string().required('Required'),
+  number: Yup.string().required('Required'),
+  zip: Yup.string().required('Required'),
+  place: Yup.string().required('Required'),
+});
 
 function Form() {
   const formik = useFormik({
@@ -22,10 +38,13 @@ function Form() {
       zip: '',
       place: '',
     },
+    validationSchema: Schema,
     onSubmit: values => {
       alert(JSON.stringify(values, null, 2));
     },
   });
+
+  console.log(formik)
 
   return (
     <Container className="form-page">

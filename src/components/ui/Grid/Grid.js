@@ -12,18 +12,18 @@ export const Container = ({ children, className = '', ...rest }) => {
 
 export const Row = ({ children, className = '', ...rest }) => {
   return (
-    <div className={`container__row ${className}`} {...rest}>
+    <div className={`row ${className}`} {...rest}>
       {children}
     </div>
   );
 };
 
 export const Col = ({ children, className = '', xs, sm, md, lg,  ...rest }) => {
-  const classes = classnames('container__col', {
-    [`container__col--${xs}`]: xs,
-    [`container__col--sm--${sm}`]: sm,
-    [`container__col--md--${md}`]: md,
-    [`container__col--lg--${lg}`]: lg,
+  const classes = classnames('row__col', {
+    [`row__col--${xs}`]: xs,
+    [`row__col--sm--${sm}`]: sm,
+    [`row__col--md--${md}`]: md,
+    [`row__col--lg--${lg}`]: lg,
   });
 
   return (

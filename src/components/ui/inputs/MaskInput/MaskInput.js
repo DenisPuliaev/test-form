@@ -1,12 +1,13 @@
 import React from "react";
 import TextInput from "../TextInput";
-
-const prependZero = str => ("0"+str).substr(-2);
+import { isNumeric } from '../../../../utils/numbers';
 
 const MaskInput = ({ form, onBlur, ...props }) => {
   const handleBlur = (e) => {
     const { value, name } = props;
-    form.setFieldValue(name, prependZero(value));
+    if(value.length === 1 && isNumeric(value)) {
+      form.setFieldValue(name, "0"+value);
+    }
     onBlur(e);
   };
 

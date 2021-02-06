@@ -1,24 +1,9 @@
 import * as Yup from 'yup';
-import dayjs from 'dayjs';
-import customParseFormat from 'dayjs/plugin/customParseFormat';
-
-dayjs.extend(customParseFormat)
-
-const dayIsValid = (d, m, y) => {
-  console.log('day, month, year', d, m, y);
-  
-  if(d && m && y) {
-    const date = dayjs(`${d} ${m} ${y}`, "DD MM YYYY");
-    console.log('date', date.isValid())
-    return date.isValid();
-  } else if(d && m) {
-    const date = dayjs(`${d} ${m}`, "DD MM");
-    console.log('date', date.isValid())
-    return date.isValid();
-  }
-
-  return true;
-};
+import {
+  dayIsValid,
+  monthIsValid,
+  yearIsValid
+} from '../../validation/date';
 
 export const Schema = Yup.object().shape({
   gender: Yup.string().required('Required'),
@@ -31,8 +16,16 @@ export const Schema = Yup.object().shape({
         return dayIsValid(day, month, year);
       })
       .required('Required'),
-    month: Yup.string().required('Required'),
-    year: Yup.string().required('Required'),
+    month: Yup.string()
+      .test('is-month', 'wrong month', (value) => {
+        return monthIsValid(value);
+      })
+      .required('Required'),
+    year: Yup.string()
+      .test('is-year', 'wrong year', (value) => {
+        return yearIsValid(value);
+      })  
+      .required('Required'),
   }),
   street: Yup.string().required('Required'),
   number: Yup.string().required('Required'),

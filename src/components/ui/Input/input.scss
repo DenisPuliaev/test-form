@@ -11,6 +11,10 @@
   border: 1px solid $input-border;
   width: 100%;
 
+  &--invalid {
+    border-color: $error;
+  }
+
   &:focus {
     background: $input-bg-focus;
     border: 2px solid $input-border-focus;
@@ -42,6 +46,10 @@
     border-radius: 50%;
     position: relative;
     border: 1px solid map-get($gray, 600);
+  }
+  
+  &--invalid &__checkmark {
+    border-color: $error;
   }
 
   &__checkmark:after {

@@ -27,10 +27,12 @@ $gray: (
  500: #a9a9a9,
  600: #a7a7a7,
 );
+$red: red;
 
 $font-400: 400 16px / 20px 'Lato', Arial, sans-serif;
 $font-700: 700 16px / 20px 'Lato', Arial, sans-serif;
 
+$error: $red;
 $text-color: $black;
 $input-font-color: $black;
 $input-border: map-get($gray, 600);

@@ -1,0 +1,22 @@
+import React from 'react';
+import { Field } from 'formik';
+import { Input } from '../Input';
+
+const isRadio = type => type === 'radio';
+
+function FormikInput({ name, value, ...rest }) {
+  return (
+    <Field name={name}>
+      {({ field, form, meta }) => (
+          <Input
+            {...rest}
+            {...field}
+            value={isRadio(rest.type) ? value : field.value}
+            invalid={meta.touched && meta.error}
+          />
+      )}
+    </Field>
+  );
+}
+
+export default FormikInput;

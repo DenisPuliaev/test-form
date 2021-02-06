@@ -90,13 +90,13 @@ function Form() {
                 <div className="form-page__inputs">
                   <Row>
                     <Col xs={4}>
-                      <FormikInput type="mask" placeholder="TT" name="birth.day" pattern="[0-9]*" />
+                      <FormikInput type="mask" placeholder="TT" name="birth.day" />
                     </Col>
                     <Col xs={4}>
-                      <FormikInput type="mask" placeholder="MM" name="birth.month" pattern="[0-9]*" />
+                      <FormikInput type="mask" placeholder="MM" name="birth.month" />
                     </Col>
                     <Col xs={4}>
-                      <FormikInput placeholder="JJJJ" name="birth.year" pattern="[0-9]*" />
+                      <FormikInput placeholder="JJJJ" name="birth.year" />
                     </Col>
                   </Row>
                 </div>

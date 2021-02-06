@@ -20,7 +20,6 @@ export const dayIsValid = (d, m, y) => {
 
   const day = parseInt(d);
   const month = parseInt(m);
-  const year = parseInt(y);
 
   if(isNumeric(d) && monthIsValid(m) && yearIsValid(y)) {
     const date = dayjs(`${d} ${m} ${y}`, "DD MM YYYY", true);

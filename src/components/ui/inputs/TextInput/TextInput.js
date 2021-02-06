@@ -3,7 +3,7 @@ import classnames from "classnames";
 import "./input.scss";
 
 const TextInput = ({ form, className = '', type = "text", invalid = false,  ...rest }) => {
-  const classes = classnames({
+  const classes = classnames('input', {
     'input--invalid': invalid,
   });
 
@@ -11,7 +11,7 @@ const TextInput = ({ form, className = '', type = "text", invalid = false,  ...r
     <input
       {...rest}
       type={type}
-      className={`input ${classes} ${className}`}
+      className={`${classes} ${className}`}
     />
   );
 };

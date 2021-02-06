@@ -1,27 +1,11 @@
 import React from 'react';
 import { Formik } from 'formik';
-import * as Yup from 'yup';
 import { Container, Row, Col } from '../../components/ui/Grid';
 import { FormGroup, FormLabel } from '../../components/ui/Form/Form';
-import { Input } from '../../components/ui/Input';
 import FormikInput from '../../components/ui/FormikInput';
 import Button from '../../components/ui/Button';
+import { Schema } from './validation';
 import './form-page.scss';
-
-const Schema = Yup.object().shape({
-  gender: Yup.string().required('Required'),
-  firstName: Yup.string().required('Required'),
-  lastName: Yup.string().required('Required'),
-  birth: Yup.object({
-    day: Yup.string().required('Required'),
-    month: Yup.string().required('Required'),
-    year: Yup.string().required('Required')
-  }),
-  street: Yup.string().required('Required'),
-  number: Yup.string().required('Required'),
-  zip: Yup.string().required('Required'),
-  place: Yup.string().required('Required'),
-});
 
 const initialValues = {
   gender: '',
@@ -52,6 +36,7 @@ function Form() {
      >
        {(formikProps) => (
          <form onSubmit={formikProps.handleSubmit}>
+           {/* {console.log(formikProps.values)} */}
           <FormGroup className="form-page__genders-row">
             <Row className="form-page__row">
               <Col xs={4}>
@@ -105,13 +90,13 @@ function Form() {
                 <div className="form-page__inputs">
                   <Row>
                     <Col xs={4}>
-                      <FormikInput placeholder="TT" name="birth.day" />
+                      <FormikInput type="mask" placeholder="TT" name="birth.day" pattern="[0-9]*" />
                     </Col>
                     <Col xs={4}>
-                      <FormikInput placeholder="MM" name="birth.month" />
+                      <FormikInput type="mask" placeholder="MM" name="birth.month" pattern="[0-9]*" />
                     </Col>
                     <Col xs={4}>
-                      <FormikInput placeholder="JJJJ" name="birth.year" />
+                      <FormikInput type="mask" placeholder="JJJJ" name="birth.year" pattern="[0-9]*" />
                     </Col>
                   </Row>
                 </div>

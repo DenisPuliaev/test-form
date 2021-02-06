@@ -1,0 +1,26 @@
+@import '../../../../styles/design-system.scss';
+
+.input {
+  height: 42px;
+  color: $input-font-color;
+  font: $font-400;
+  padding: 10px;
+  border-radius: 1px;
+  background: $input-bg;
+  outline: none;
+  border: 1px solid $input-border;
+  width: 100%;
+
+  &--invalid {
+    border-color: $error;
+  }
+
+  &:focus {
+    background: $input-bg-focus;
+    border: 2px solid $input-border-focus;
+  }
+
+  &::placeholder {
+    color: $placeholder-color;
+  }
+}

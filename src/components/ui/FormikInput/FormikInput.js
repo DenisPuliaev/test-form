@@ -1,6 +1,6 @@
 import React from 'react';
 import { Field } from 'formik';
-import { Input } from '../Input';
+import Input from '../inputs';
 
 const isRadio = type => type === 'radio';
 
@@ -11,6 +11,7 @@ function FormikInput({ name, value, ...rest }) {
           <Input
             {...rest}
             {...field}
+            form={form}
             value={isRadio(rest.type) ? value : field.value}
             invalid={meta.touched && meta.error}
           />

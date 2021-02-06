@@ -22,10 +22,7 @@ export const dayIsValid = (d, m, y) => {
   const month = parseInt(m);
   const year = parseInt(y);
 
-  console.log('d, m, y', day, month, year);
-
   if(isNumeric(d) && monthIsValid(m) && yearIsValid(y)) {
-    console.log('inside')
     const date = dayjs(`${d} ${m} ${y}`, "DD MM YYYY", true);
     isValid = date.isValid();
   } else if(isNumeric(d) && monthIsValid(m)) {

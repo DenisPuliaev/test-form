@@ -36,7 +36,6 @@ function Form() {
      >
        {(formikProps) => (
          <form onSubmit={formikProps.handleSubmit}>
-           {console.log(formikProps.values.birth)}
           <FormGroup className="form-page__genders-row">
             <Row className="form-page__row">
               <Col xs={4}>

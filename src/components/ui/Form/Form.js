@@ -12,7 +12,7 @@ export const FormGroup = ({ children, className = '', ...rest }) => {
   );
 };
 
-export const FormLabel = ({ children, className = '', right, ...rest }) => {
+export const FormLabel = ({ children, className = '', ...rest }) => {
   const classes = classnames("label", {});
 
   return (

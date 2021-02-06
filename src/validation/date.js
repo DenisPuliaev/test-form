@@ -1,8 +1,5 @@
 import dayjs from 'dayjs';
-import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { isNumeric, numberInRange } from '../utils/numbers';
-
-dayjs.extend(customParseFormat)
 
 const daysInMonth = [ 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
 

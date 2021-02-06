@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
 import './styles/main.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+dayjs.extend(customParseFormat)
 
 ReactDOM.render(
   <React.StrictMode>

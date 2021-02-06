@@ -96,7 +96,7 @@ function Form() {
                       <FormikInput type="mask" placeholder="MM" name="birth.month" pattern="[0-9]*" />
                     </Col>
                     <Col xs={4}>
-                      <FormikInput type="mask" placeholder="JJJJ" name="birth.year" pattern="[0-9]*" />
+                      <FormikInput placeholder="JJJJ" name="birth.year" pattern="[0-9]*" />
                     </Col>
                   </Row>
                 </div>
